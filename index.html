@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 1</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+
+<body>
+    
+<main>
+
+    <header>
+        <img src="img/logo-amarillo2.png" alt="logo" height="70px">
+    </header>
+    <h1>4.	Escribir un Programa que calcule 4 áreas: 1-cuadrado, 2-rectángulo, 3-triángulo y 4-círculo.</h1>
+    <div id="solucion">
+
+        <script>
+            //Declaracion de variables//
+            var opciones,opcionnum,lado,areac,base,altura,arear,baset,alturat,areat,radio,areacir,mensaje;
+            
+    
+            //Fase de lectura / estructura//
+            opciones = prompt("Ingrese la opción (1: cuadrado, 2: rectángulo, 3: triángulo, 4: círculo):");
+        
+            //Fase procesamientos de datos//
+
+            opcionnum = parseInt(opciones);
+
+            if (opcionnum == 1) {
+                lado = parseFloat(prompt("Ingrese la longitud del lado del cuadrado:"));
+                areac = lado * lado;
+                document.write("=====El area del cuadrado====="+"<br>");
+                document.write("La longitud de un lado es:" +lado+"<br>");
+                document.write("El area del cuadrado es:" +areac);
+            } else {
+                if (opcionnum == 2) {
+                    base = parseFloat(prompt("Ingrese la longitud de la base del rectángulo:"));
+                    altura = parseFloat(prompt("Ingrese la altura del rectángulo:"));
+                    arear = base * altura;
+                    document.write("=====El area del Rectangulo====="+"<br>");
+                    document.write("La altura es:" +altura+"<br>");
+                    document.write("La base es:" +base+"<br>");
+                    document.write("El area del rectangulo es:" +arear+"<br>");
+
+                } else {
+                    if (opcionnum == 3) {
+                        baset = parseFloat(prompt("Ingrese la longitud de la base del triángulo:"));
+                        alturat = parseFloat(prompt("Ingrese la altura del triángulo:"));
+                        areat = (baset * alturat) / 2;
+                        document.write("=====El area del Triangulo====="+"<br>");
+                        document.write("La altura es:" +alturat+"<br>");
+                        document.write("La base es:" +baset+"<br>");
+                        document.write("El area del triangulo es:" +areat+"<br>");
+                    
+                    } else {
+                        if (opcionnum == 4) {
+                            radio = parseFloat(prompt("Ingrese el radio del círculo:"));
+                            areacir = Math.PI * Math.pow(radio, 2);
+                            document.write("=====El area del Circulo====="+"<br>");
+                            document.write("El radio es:"+radio+"<br>");
+                            document.write("El area del circulo es: " + areacir.toFixed(2)+"<br>");
+                        } else {
+                            mensaje = "La operación no está permitida";
+                            document.write(mensaje);
+                            
+                        }
+                    }
+                }
+            }
+           
+
+        </script>
+    </div>
+   
+</main>
+
+
+</body>
+</html>
